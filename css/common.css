@@ -1,0 +1,377 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&display=swap");
+
+/* cssリセット */ /*利用するタグによってこちらの内容は増やす*/
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #000;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+body {
+  /* background-image: url("../images/bg-min.jpg"); */
+  background-color: #eddec1;
+  /* background-repeat: repeat; */
+}
+.header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 40px;
+}
+.footer_img img,
+h1 img {
+  width: 60%;
+  margin: 3.1vw 40px 20px 3.1vw;
+}
+.top_pc_nav {
+  margin: 40px 0;
+}
+.top {
+  text-align: center;
+  font-size: 1.6vw;
+  font-family: "Cinzel", serif;
+  padding: 20px 6.5vw;
+}
+
+.works ul {
+  display: flex;
+}
+
+.pc_nav ul li {
+  font-size: 1.6vw;
+  font-family: "Cinzel", serif;
+  padding: 20px 30px;
+}
+.pc_nav ul li a span {
+  position: relative;
+}
+.pc_nav ul li a span::before {
+  background: black;
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.pc_nav ul li a span:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.scroll {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 59vw;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.scroll p {
+  font-size: 17px;
+  font-family: "Cinzel", serif;
+}
+
+.scroll::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: #000;
+  right: 50%;
+  bottom: -70px;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  animation: scroll 2.5s infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #2d3487;
+  padding: 18px 100px;
+  border-radius: 30px;
+  transition: 0.3s;
+  position: relative;
+}
+.btn::after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
+}
+.btn:hover {
+  opacity: 0.6;
+}
+.btn_space {
+  text-align: center;
+  margin-top: 160px;
+}
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (min-width: 1001px) {
+  .sp_br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pc_nav {
+    display: none;
+  }
+  #top_header {
+    margin: auto 40px;
+  }
+  h1 img {
+    width: 60%;
+    margin: 40px auto;
+  }
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .sp_btn span {
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: black;
+    transition: 0.3s;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: black;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+  /* ハンバーガー 閉じる*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background: #fff;
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+    background: #fff;
+  }
+  /* ハンバーガーメニュー*/
+  .top {
+    /* margin: 0 20px; */
+    padding: 0;
+  }
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* ディバイスの高さ*/
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Cinzel", serif;
+  }
+}
+
+.footer_wrap {
+  display: flex;
+  justify-content: center;
+  transform: translate(-5%, 0);
+}
+.footer_pc_nav ul li {
+  text-align: center;
+  font-size: 21px;
+  font-family: "Cinzel", serif;
+  padding: 20px 30px;
+}
+.footer_pc_nav ul li a span {
+  position: relative;
+}
+.footer_pc_nav ul li a span::before {
+  background: black;
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.footer_pc_nav ul li a span:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+.credit {
+  text-align: center;
+  font-size: 12px;
+  margin: 170px auto 90px;
+}
+.pagetop {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 125px;
+}
+@media screen and (max-width: 1000px) {
+  .footer_wrap {
+    display: block;
+    transform: translate(0, 0);
+  }
+  .footer_img {
+    text-align: center;
+    width: 47%;
+    margin: 0 auto;
+  }
+}
+.line {
+  position: absolute;
+  width: 78px;
+  top: 0;
+  left: 0;
+}
+
+.line2 {
+  position: absolute;
+  width: 78px;
+  top: 50%;
+  left: 0;
+}
+.pink {
+  fill: #f2cce0;
+}
+.yellow {
+  fill: #f5e721;
+}
+.blue {
+  fill: #ccd7f2;
+}
+.writing {
+  text-align: right;
+}
+.writing img {
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .writing img {
+    padding-top: 200px;
+    padding-bottom: 30px;
+  }
+}
+
+.line_relative {
+  position: relative;
+}
+.change {
+  cursor: url(../images/cursor_img.png), auto !important;
+}

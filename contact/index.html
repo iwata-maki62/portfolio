@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <meta name="description" content="お問い合わせはこちらから">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../android-chrome-192x192.png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1>
+                <a href="../index.html#top_header">
+                    <img src="../images/logo.svg" alt="maki_design">
+                </a>
+            </h1>
+            <nav class="works pc_nav">
+                <ul>
+                    <li><a href="../index.html#top_header"><span>Home</span></a></li>
+                    <li><a href="../works/index.html"><span>Works</span></a></li>
+                    <li><a href="../index.html#skills"><span>Skills</span></a></li>
+                    <li><a href="../index.html#profile"><span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="works sp_nav">
+                <ul>
+                    <li><a href="../index.html#top_header"><span>Home</span></a></li>
+                    <li><a href="../works/index.html"><span>Works</span></a></li>
+                    <li><a href="../index.html#skills"><span>Skills</span></a></li>
+                    <li><a href="../index.html#profile"><span>Profile</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2 id="contact" class="contact">
+        <img src="images/contact_envelope.png" alt="Contact">
+    </h2>
+    <p class="contact_message">maki×design.へのお問い合わせを受け付けております。<br>
+        フォームにご用件を記載のうえ、<br>
+        お問い合わせください。 </p>
+
+    <div class="form">
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdLYuXlIKSBdqfoV-3QJSfTURT24s1whfCDLX97kRHV43RQ5Q/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+            <label for="name" class="email">氏名</label>
+            <input id="name" type="text" name="entry.923406324" placeholder="デザイン　花子" required><br>
+
+            <label for="furigana" class="email">フリガナ</label>
+            <input id="furigana" type="text" name="entry.340276279" placeholder="デザイン　ハナコ" required><br>
+
+            <label for="e-mail" class="email">メールアドレス</label>
+            <input id="e-mail" type="text" name="entry.1753984314" placeholder="example@mail.co.jp" required><br>
+
+            <label for="company_name" class="email">会社名</label>
+            <input id="company_name" type="text" name="eentry.761388279" placeholder="株式会社〇〇"><br>
+
+            <label for="selection" class="email">お問い合わせの種類</label>
+            <select id="selection" name="entry.1847142799">
+                <option value="select">▼選択してください</option>
+                <option>WEB制作について</option>
+                <option>チラシなどグラフィック制作について</option>
+                <option>WEB制作とグラフィック制作について</option>
+                <option>料金について</option>
+                <option>その他</option>
+            </select><br>
+
+            <label for="text" class="email">お問い合わせ内容</label>
+            <textarea id="text" name="entry.1929832785" placeholder="お気軽にお問い合わせください。" required></textarea><br>
+
+
+            <button type="submit" name="button" value="送信" class="btn">送信する</button>
+        </form>
+        <script>
+            var submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+            onload="if(submitted)  {window.location='../thanks.html';}"></iframe>
+    </div>
+    <div class="writing">
+        <img src="images/illust_envelope.png" alt="writing">
+    </div>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_img">
+                <img src="../images/logo.svg" alt="main logo">
+            </div>
+            <nav class="footer_pc_nav">
+                <ul>
+                    <li><a href="../index.html"><span>Home</span></a></li>
+                    <li><a href="../works/index.html"><span>Works</span></a></li>
+                    <li><a href="../index.html#skills"><span>Skills</span></a></li>
+                    <li><a href="../index.html#profile"><span>Profile</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <p class="credit">Coryright Maki×design. All Rights Reserved.</p>
+
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
