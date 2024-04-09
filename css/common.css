@@ -60,7 +60,6 @@ body {
   align-items: center;
   margin: auto 40px;
 }
-.footer_img img,
 h1 img {
   width: 60%;
   margin: 3.1vw 40px 20px 3.1vw;
@@ -178,7 +177,7 @@ h1 img {
 }
 .btn_space {
   text-align: center;
-  margin-top: 160px;
+  margin-top: 115px;
 }
 .sp_nav,
 .sp_btn {
@@ -196,7 +195,7 @@ h1 img {
     display: none;
   }
   #top_header {
-    margin: auto 40px;
+    margin: auto 20px;
   }
   h1 img {
     width: 60%;
@@ -234,6 +233,9 @@ h1 img {
   }
   .sp_btn span::after {
     top: 10px;
+  }
+  .btn_space {
+    margin-top: 70px;
   }
   /* ハンバーガー 閉じる*/
   .sp_btn.open span {
@@ -283,6 +285,10 @@ h1 img {
   justify-content: center;
   transform: translate(-5%, 0);
 }
+.footer_img {
+  width: 20%;
+  margin: 3.1vw 40px 20px 3.1vw;
+}
 .footer_pc_nav ul li {
   text-align: center;
   font-size: 21px;
@@ -312,7 +318,7 @@ h1 img {
 .credit {
   text-align: center;
   font-size: 12px;
-  margin: 170px auto 90px;
+  margin: 100px auto 90px;
 }
 .pagetop {
   position: fixed;
@@ -326,9 +332,17 @@ h1 img {
     transform: translate(0, 0);
   }
   .footer_img {
+    width: 60%;
     text-align: center;
-    width: 47%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+  }
+  .credit {
+    margin: 70px auto 50px;
+  }
+  .pagetop {
+    right: 20px;
+    bottom: 20px;
+    width: 85px;
   }
 }
 .line {
@@ -364,6 +378,7 @@ h1 img {
 
 @media screen and (max-width: 1000px) {
   .writing img {
+    width: 80%;
     padding-top: 200px;
     padding-bottom: 30px;
   }

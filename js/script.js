@@ -42,4 +42,4 @@ $('.tab li').on('click', function(){
     }
   });
     });
-});
+})

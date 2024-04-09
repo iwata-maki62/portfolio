@@ -43,7 +43,7 @@
   }
   .sticky {
     display: flex;
-    margin-top: 130px;
+    margin-top: 80px;
     margin-left: 65%;
   }
   .message {
@@ -73,7 +73,7 @@
   width: 56%;
 }
 .works {
-  padding-top: 106px;
+  padding-top: 100px;
   display: flex;
   align-items: end;
   gap: 45px;
@@ -105,12 +105,17 @@
     display: none;
   }
   .works_title {
-    margin: 0 auto;
     transform: translate(-10%);
+    margin: 0 auto;
+  }
+  .works_title img {
+    width: 100%;
   }
   .works {
     display: flex;
+    padding-top: 60px;
     flex-direction: column;
+    gap: 25px;
     margin: 0 5%;
   }
   .works_img {
@@ -174,14 +179,17 @@
 }
 @media screen and (max-width: 1000px) {
   .skills {
-    margin: 100px 0 120px;
+    margin: 100px 0 80px;
   }
   .skills_img {
-    width: 40%;
+    width: 50%;
   }
   .skills_box {
     display: block;
     margin-top: 50px;
+  }
+  .skills_wrap {
+    padding-top: 25px;
   }
   .web_support,
   .branding_support,
@@ -232,13 +240,15 @@
 
 @media screen and (max-width: 1000px) {
   .profile {
-    padding: 0 40px;
+    padding: 0 20px;
+    margin: 0 auto 70px;
   }
   .profile_img {
-    width: 45%;
+    width: 60%;
+    margin: 0 auto 20px;
   }
   .my_picture {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .profile_flex {
@@ -278,7 +288,7 @@
 }
 @media screen and (max-width: 1000px) {
   .contact_img {
-    width: 45%;
+    width: 55%;
   }
 }
 

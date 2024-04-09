@@ -42,7 +42,7 @@
     display: block;
   }
   .list {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .list img {
@@ -54,7 +54,6 @@
   background-color: #fff9f2;
 }
 .work_2 {
-  padding: 0.5% 0;
   background-color: #fff9f2;
 }
 .work_3 {
