@@ -29,6 +29,11 @@
     margin: 50px 8px 0;
   }
 }
+
+.tab li:active {
+  background-color: #2d3487;
+  color: #fff;
+}
 .works_wrap {
   display: flex;
   flex-wrap: wrap;
