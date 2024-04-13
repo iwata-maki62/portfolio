@@ -7,7 +7,7 @@
   opacity: 0.75;
 }
 .tab li {
-  padding: 25px 50px;
+  padding: 20px 40px;
   color: #2d3487;
   border-radius: 40px;
   background-color: #fff9f2;
@@ -17,7 +17,17 @@
 .tab li input {
   display: none;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
+  .tab li {
+    padding: 20px 30px;
+    margin: 50px 8px 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tab li {
+    padding: 17px 30px;
+    margin: 50px 8px 0;
+  }
 }
 .works_wrap {
   display: flex;
@@ -34,7 +44,7 @@
   text-align: center;
 }
 .works img {
-  width: 33%;
+  width: 46%;
   transform: translate(-20%, 0);
 }
 @media screen and (max-width: 1000px) {

@@ -40,5 +40,7 @@ textarea {
   height: 200px;
 }
 button {
-  margin: 20px 17% 50px;
+  width: 70%;
+  margin: 20px 14%;
+  border: none;
 }

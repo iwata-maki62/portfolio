@@ -50,9 +50,7 @@ img {
 }
 
 body {
-  /* background-image: url("../images/bg-min.jpg"); */
   background-color: #eddec1;
-  /* background-repeat: repeat; */
 }
 .header_wrap {
   display: flex;
@@ -146,13 +144,12 @@ h1 img {
     transform-origin: 0 100%;
   }
 }
-
 .btn {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   background: #2d3487;
-  padding: 18px 100px;
+  padding: 17px 133px;
   border-radius: 30px;
   transition: 0.3s;
   position: relative;
@@ -278,6 +275,17 @@ h1 img {
     font-size: 18px;
     font-family: "Cinzel", serif;
   }
+  .btn {
+    padding: 14px 66px;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 img {
+    width: 25%;
+  }
 }
 
 .footer_wrap {
@@ -329,12 +337,14 @@ h1 img {
   bottom: 40px;
   width: 125px;
 }
+
 @media screen and (max-width: 1000px) {
   .footer_wrap {
     display: block;
     transform: translate(0, 0);
   }
   .footer_img {
+    width: 60%;
     margin: 0 auto 20px;
   }
   .credit {
@@ -346,6 +356,7 @@ h1 img {
     width: 85px;
   }
 }
+
 .line {
   position: absolute;
   width: 78px;
@@ -368,8 +379,20 @@ h1 img {
 .blue {
   fill: #ccd7f2;
 }
-.writing {
+.top_writing,
+.writing,
+.works_writing {
   text-align: right;
+}
+.top_writing img {
+  width: 46%;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+.works_writing img {
+  width: 46%;
+  padding-top: 90px;
+  padding-bottom: 30px;
 }
 .writing img {
   width: 50%;
@@ -378,9 +401,19 @@ h1 img {
 }
 
 @media screen and (max-width: 1000px) {
-  .writing img {
+  .top_writing img {
     width: 80%;
     padding-top: 200px;
+    padding-bottom: 30px;
+  }
+  .writing img {
+    width: 80%;
+    padding-top: 6px;
+    padding-bottom: 30px;
+  }
+  .works_writing img {
+    width: 80%;
+    padding-top: 85px;
     padding-bottom: 30px;
   }
 }
