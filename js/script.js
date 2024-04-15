@@ -28,6 +28,11 @@ $(function () {
 //WORKsタブ
 $('.tab li').on('click', function(){
   let cat = $(this).html();
+
+
+  $('.tab li').removeClass('is-active');
+  $(this).addClass('is-active');
+
   $('.list').hide(); // .listを一度すべて非表示にする
 
   // allの場合
@@ -35,11 +40,11 @@ $('.tab li').on('click', function(){
     $('.list').hide();
     $('.list').fadeIn();
   }
-  // 選択したカテゴリーだけを表示
-  $('.list').each(function(){
+ // 選択したカテゴリーだけを表示
+ $('.list').each(function(){
     if($(this).data('cat') == cat){
       $(this).fadeIn();
     }
   });
-    });
-})
+  });
+});

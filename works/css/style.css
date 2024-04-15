@@ -30,7 +30,7 @@
   }
 }
 
-.tab li:active {
+.tab li.is-active {
   background-color: #2d3487;
   color: #fff;
 }
